@@ -10,8 +10,8 @@
 
 FROM python:3.12-slim
 WORKDIR /app
-# Installe tout en root, conserve cache apt/pip
-COPY . /app
-RUN pip install -r requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY main.py .
 EXPOSE 4000
 CMD ["python", "main.py"]
