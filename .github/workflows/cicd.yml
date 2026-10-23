@@ -104,4 +104,4 @@ jobs:
             sleep 2
           done
       - name: Résumer la mise en production
-        run: echo "✅ L'application atelier-flask a été mise en production avec succès." >> "$GITHUB_STEP_SUMMARY"
+        run: echo "L'application atelier-flask a été mise en production avec succès." >> "$GITHUB_STEP_SUMMARY"
